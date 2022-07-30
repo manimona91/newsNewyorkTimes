@@ -60,7 +60,7 @@ class ArticleTile extends StatelessWidget {
                                 maxLines: 2,
                                 style: TextStyle(
                                     color: Colors.black87,
-                                    fontSize: 18,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.w500),
                               ),
                               SizedBox(

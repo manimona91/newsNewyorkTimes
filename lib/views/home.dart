@@ -19,7 +19,6 @@ class _MyHomePageState extends State<MyHomePage> {
   void getArticles() async {
     NewsAPI news = NewsAPI();
     await news.getArticles();
-
     newslist = news.news;
     setState(() {
       _loading = false;
