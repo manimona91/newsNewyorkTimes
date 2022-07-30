@@ -33,4 +33,5 @@ without redirection to the browser]
 **Packages Used**
 
   http: Used to get the data from the API 
+  
   webview_flutter:  To open the article url inside the app 
