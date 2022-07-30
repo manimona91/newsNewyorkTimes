@@ -27,6 +27,7 @@ without redirection to the browser]
 **Important Parts:**
 
  [x] Fetch news from API.
+ 
  [x] Parse complicated JSON.
 
 **Packages Used**
