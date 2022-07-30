@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:news/model/article.dart';
 import 'package:news/resources/api.dart';
@@ -17,14 +15,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   List<Articles> newslist = [];
   bool _loading = true;
-  bool _changeColor = true;
 
   void getArticles() async {
     NewsAPI news = NewsAPI();
     await news.getArticles();
-    setState(() {
-      _changeColor = false;
-    });
+
     newslist = news.news;
     setState(() {
       _loading = false;
@@ -34,9 +29,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     _loading = true;
-    _changeColor = true;
     super.initState();
-
     getArticles();
   }
 
@@ -47,34 +40,33 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    //if (_loading) {
-    return Container(
-      width: double.infinity,
-      height: double.infinity,
-      color: Colors.white,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-              color: Colors.white,
-              child: Image.asset('assets/newYorkIcon.png',
-                  height: 200,
-                  scale: 2.5,
-                  opacity: AlwaysStoppedAnimation(0.3))),
-          Text(""),
-          SizedBox(
-            height: 50,
-          ),
-          Center(
-            child: CircularProgressIndicator(
-              color: Colors.amber,
+    if (_loading) {
+      return Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.white,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+                color: Colors.white,
+                child: Image.asset('assets/newYorkIcon.png',
+                    height: 200,
+                    scale: 2.5,
+                    opacity: AlwaysStoppedAnimation(0.3))),
+            SizedBox(
+              height: 50,
             ),
-          )
-        ],
-      ),
-    );
-    /*  } else {
+            Center(
+              child: CircularProgressIndicator(
+                color: Colors.amber,
+              ),
+            )
+          ],
+        ),
+      );
+    } else {
       return NewsPage(newslist: newslist);
-    }*/
+    }
   }
 }
