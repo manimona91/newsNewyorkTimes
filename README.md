@@ -1,9 +1,10 @@
 
 **Flutter NewYorkTimes App**
+
 News App developed with Flutter and API from NYTimes API
 
 
-** Why Flutter: **
+**Why Flutter:**
 
 With Flutter we can build high quality natively compiled apps for iOS and Android quickly,
 without having to write the code for the two apps separately. 
