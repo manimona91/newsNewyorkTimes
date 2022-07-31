@@ -37,4 +37,5 @@ without redirection to the browser]
   webview_flutter:  To open the article url inside the app 
   
 **Brief Video**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HssCFn8hlbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/HssCFn8hlbA/0.jpg)](https://www.youtube.com/watch?v=HssCFn8hlbA)
+
