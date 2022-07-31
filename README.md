@@ -13,7 +13,7 @@ without having to write the code for the two apps separately.
 **Run the app :**
  1. Install Flutter 
  2. Clone the project 
- 3. Run this command : flutter run main.dart
+ 3. Run this command : flutter run lib/main.dart
 
 **Feature**
 
